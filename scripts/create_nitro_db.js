@@ -1,4 +1,4 @@
 db = db.getSiblingDB('nitro');
-db.createCollection('defaultCollection');
+db.createCollection('food');
 
 print('Nitro database and defaultCollection created successfully.');
