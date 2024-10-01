@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  nitro: {
+    plugins: ['~/server/index.ts']
+  },
   modules: ['@nuxtjs/i18n', '@pinia/nuxt'],
   i18n: {
     locales: ['en', 'fr'],
