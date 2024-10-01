@@ -1,7 +1,9 @@
 version: '3.3'
 services:
   nuxt:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/${ENV}/Dockerfile
     container_name: nuxt
     restart: unless-stopped
     ports:
