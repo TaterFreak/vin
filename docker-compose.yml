@@ -1,5 +1,18 @@
 version: '3.3'
 services:
+  mongo:
+    image: mongo
+    restart: always
+    container_name: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - "./var/db_data:/db_data"
+    networks:
+      - app-network
   nuxt:
     build:
       context: .
@@ -8,3 +21,8 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

@@ -5,6 +5,7 @@ export default async (_nitroApp: Nitro) => {
 
   try {
     await mongoose.connect(config.mongodbUri);
+    console.log('CONNECTED TO MONGODB');
   } catch (e) {
     console.log(e)
   }
