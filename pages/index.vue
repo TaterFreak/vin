@@ -14,8 +14,9 @@ await callOnce(website.fetch);
       <button @click="setLocale('fr')">fr</button>
       <p>{{ $t('welcome') }}</p>
 
-      <h1>{{ website.name }}</h1>
-      <p>{{ website.description }}</p>
+      <div v-for="food in website.foods">
+        <span>{{food.slug}}</span>
+      </div>
     </div>
   </div>
 </template>

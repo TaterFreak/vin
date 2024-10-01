@@ -15,4 +15,4 @@ docker-start-prod: _docker-install
 create-nitro-db:
 	@echo "Creating nitro database..."
 	$(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/create_nitro_db.js
-	@echo "Nitro database created with 'defaultCollection'."
+	@echo "Nitro database created successfully'."

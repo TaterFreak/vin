@@ -24,6 +24,8 @@ services:
       - 3000:3000
     networks:
       - app-network
+    volumes:
+      - .:/app
 networks:
   app-network:
     driver: bridge
