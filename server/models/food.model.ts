@@ -9,14 +9,14 @@ interface IFood {
   id: number
   name: string
   localizedNames: ILocalizedString[]
-  pairing: string[]
+  pairings: string[]
 }
 
 const FoodSchema = new Schema<IFood>({
   id: Number,
   name: String,
   localizedNames: Array,
-  pairing: Array
+  pairings: Array
 });
 
 export const Food = model("Food", FoodSchema);

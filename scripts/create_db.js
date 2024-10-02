@@ -28,8 +28,8 @@ db.foods.insertOne({
     en: 'Cheese'
   },
   pairings: [
-    async () => await db.wines.findOne({id: 1}),
-    async () => await db.wines.findOne({id: 2})
+    1,
+    2
   ]
 });
 print('Database created successfully.');
