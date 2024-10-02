@@ -6,12 +6,14 @@ interface ILocalizedString {
 }
 
 interface IFood {
-  name: string;
-  localizedNames: ILocalizedString[];
+  id: number
+  name: string
+  localizedNames: ILocalizedString[]
   pairing: string[]
 }
 
 const FoodSchema = new Schema<IFood>({
+  id: Number,
   name: String,
   localizedNames: Array,
   pairing: Array

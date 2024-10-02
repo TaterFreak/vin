@@ -13,7 +13,7 @@ await callOnce(website.fetch);
       <button @click="setLocale('en')">en</button>
       <button @click="setLocale('fr')">fr</button>
       <p>{{ $t('welcome') }}</p>
-
+{{website.foods}}
       <div v-for="food in website.foods">
         <span>{{food.slug}}</span>
       </div>

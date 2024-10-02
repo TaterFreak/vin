@@ -1,5 +1,5 @@
 import {Food} from "~/server/models/food.model";
 
 export default defineEventHandler(async (event) => {
-  return await Food.find();
+  return Food.find();
 })

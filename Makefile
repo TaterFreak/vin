@@ -1,5 +1,5 @@
 DOCKER_COMPOSE=$(shell which docker-compose 2> /dev/null || echo docker compose)
-MONGO_CONTAINER = $(DOCKER_COMPOSE) exec mongo
+MONGO_CONTAINER = mongo
 MONGO_USER = admin
 MONGO_PASSWORD = admin
 
@@ -12,7 +12,16 @@ docker-start-dev: _docker-install
 docker-start-prod: _docker-install
 	ENV="production" $(DOCKER_COMPOSE) up -d
 
-create-nitro-db:
-	@echo "Creating nitro database..."
-	$(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/create_nitro_db.js
-	@echo "Nitro database created successfully'."
+create-user:
+	@echo "Creating user..."
+	$(DOCKER_COMPOSE) exec $(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/create_user.js
+
+create-db:
+	@echo "Creating database..."
+	$(DOCKER_COMPOSE) exec $(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/create_db.js
+
+drop-db:
+	@echo "Dropping database..."
+	$(DOCKER_COMPOSE) exec $(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/drop_db.js
+
+reset-db: drop-db create-db
