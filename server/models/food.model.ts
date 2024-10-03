@@ -1,21 +1,16 @@
 import { Schema, model } from "mongoose";
 
-interface ILocalizedString {
-  fr: string
-  en: string
-}
-
 interface IFood {
   id: number
   name: string
-  localizedNames: ILocalizedString[]
+  categories: string[]
   pairings: string[]
 }
 
 const FoodSchema = new Schema<IFood>({
   id: Number,
   name: String,
-  localizedNames: Array,
+  categories: Array,
   pairings: Array
 });
 

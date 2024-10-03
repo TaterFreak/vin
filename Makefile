@@ -25,3 +25,6 @@ drop-db:
 	$(DOCKER_COMPOSE) exec $(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/drop_db.js
 
 reset-db: drop-db create-db
+
+import-data:
+	$(DOCKER_COMPOSE) exec $(MONGO_CONTAINER) mongosh -u $(MONGO_USER) -p $(MONGO_PASSWORD) --file ./scripts/import_data.js

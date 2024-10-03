@@ -8,5 +8,9 @@ export default defineI18nConfig(() => ({
     fr: {
       welcome: 'Bienvenue'
     }
+  },
+  customRoutes: 'config',
+  pages: {
+    about
   }
 }))

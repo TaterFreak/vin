@@ -12,8 +12,8 @@ await callOnce(website.fetch);
     <div>
       <button @click="setLocale('en')">en</button>
       <button @click="setLocale('fr')">fr</button>
+      <NuxtLinkLocale to="about">about</NuxtLinkLocale>
       <p>{{ $t('welcome') }}</p>
-{{website.foods}}
       <div v-for="food in website.foods">
         <span>{{food.slug}}</span>
       </div>

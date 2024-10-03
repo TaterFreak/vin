@@ -11,7 +11,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin
     volumes:
       - "./var/db_data:/db_data"
+      - "./assets/data:/assets/data"
       - "./scripts:/scripts"
+      - "./node_modules:/node_modules"
     networks:
       - app-network
   nuxt:

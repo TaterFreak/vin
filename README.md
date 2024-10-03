@@ -1,8 +1,4 @@
 ## Setup
-
-Install mongoDB
-https://www.mongodb.com/try/download/shell
-
 Make sure to install the dependencies:
 
 ```bash
@@ -17,8 +13,12 @@ make docker-start-prod
 # npm
 make create-user
 make create-db
+make import-data
 
 
 make drop-db
 make reset-db
 ```
+
+Use https://www.mongodb.com/fr-fr/products/tools/compass to browse database
+Local credentials are admin:admin
