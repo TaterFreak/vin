@@ -3,8 +3,8 @@ export const useFoodStore = defineStore('foodStore', {
     foods: []
   }),
   actions: {
-    async fetch() {
-      this.foods = await $fetch('/api/foods');
+    async fetchAllFoodWithDetails() {
+      this.foods = await $fetch('/api/food');
     }
   }
 })

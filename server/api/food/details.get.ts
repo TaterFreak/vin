@@ -31,9 +31,9 @@ export default defineEventHandler(async (event) => {
         $project: {
           slug: 1,
           categories: 1,
-          "wineTypesData.slug": 1,
-          "winesData.name": 1,
-          "wineAppellationsData.name": 1
+          "wineTypesData": 1,
+          "winesData": 1,
+          "wineAppellationsData": 1
         }
       }
     ]);
