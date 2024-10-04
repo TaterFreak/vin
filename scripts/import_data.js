@@ -7,13 +7,20 @@ const wineAppellations = [];
 const wineTypes = [];
 const wineRegions = [];
 const foods = [];
+let db;
 
 async function readWines() {
   return new Promise((resolve, reject) => {
     fs.createReadStream('../assets/data/wines.csv')
       .pipe(csv())
       .on('data', (row) => {
-        wines.push(row);
+        console.log(row)
+
+        wines.push({
+          id: parseInt(row.id),
+          name: row.name,
+          appelation: parseInt(row.appelation)
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');
@@ -30,7 +37,10 @@ async function readCountries() {
     fs.createReadStream('../assets/data/wineCountries.csv')
       .pipe(csv())
       .on('data', (row) => {
-        wineCountries.push(row);
+        wineCountries.push({
+          id: parseInt(row.id),
+          name: row.name,
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');
@@ -47,7 +57,10 @@ async function readTypes() {
     fs.createReadStream('../assets/data/wineTypes.csv')
       .pipe(csv())
       .on('data', (row) => {
-        wineTypes.push(row);
+        wineTypes.push({
+          id: parseInt(row.id),
+          slug: row.slug,
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');
@@ -64,7 +77,11 @@ async function readRegions() {
     fs.createReadStream('../assets/data/wineRegions.csv')
       .pipe(csv())
       .on('data', (row) => {
-        wineRegions.push(row);
+        wineRegions.push({
+          id: parseInt(row.id),
+          name: row.name,
+          country: parseInt(row.country)
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');
@@ -81,7 +98,11 @@ async function readAppellations() {
     fs.createReadStream('../assets/data/wineAppellations.csv')
       .pipe(csv())
       .on('data', (row) => {
-        wineAppellations.push(row);
+        wineAppellations.push({
+          id: parseInt(row.id),
+          name: row.name,
+          region: parseInt(row.region)
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');
@@ -98,7 +119,20 @@ async function readFoods() {
     fs.createReadStream('../assets/data/foods.csv')
       .pipe(csv())
       .on('data', (row) => {
-        foods.push(row);
+        const wineTypeIds = row.wineTypeIds.split(',').map(Number);
+        const wineAppellationIds = row.wineAppellationIds.split(',').map(Number);
+        const wineRegionIds = row.wineRegionIds.split(',').map(Number);
+        const wineIds = row.wineIds.split(',').map(Number);
+        const categories = row.categories.split(',').map(String);
+        foods.push({
+          id: parseInt(row.id),
+          slug: row.slug,
+          categories,
+          wineAppellationIds,
+          wineRegionIds,
+          wineIds,
+          wineTypeIds
+        });
       })
       .on('end', () => {
         console.log('CSV file successfully processed');

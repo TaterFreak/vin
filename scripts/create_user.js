@@ -1,3 +1,4 @@
+db = db.getSiblingDB('nitro');
 db.createUser({
   user: 'admin',
   pwd: 'admin',

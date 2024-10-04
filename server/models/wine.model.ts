@@ -9,7 +9,7 @@ interface IWine {
 const WineSchema = new Schema<IWine>({
   id: Number,
   name: String,
-  appellation: String
+  appellation: Number
 });
 
 export const Wine = model("Wine", WineSchema);

@@ -14,12 +14,12 @@ interface IFood {
 const FoodSchema = new Schema<IFood>({
   id: Number,
   name: String,
-  categories: Array,
-  pairings: Array,
-  wineTypeIds: Array,
-  wineRegionIds: Array,
-  wineAppellationIds: Array,
-  wineIds: Array
+  categories: [Number],
+  pairings: [Number],
+  wineTypeIds: [Number],
+  wineRegionIds: [Number],
+  wineAppellationIds: [Number],
+  wineIds: [Number]
 });
 
 export const Food = model("Food", FoodSchema);
