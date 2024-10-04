@@ -10,7 +10,4 @@ export default defineI18nConfig(() => ({
     }
   },
   customRoutes: 'config',
-  pages: {
-    about
-  }
 }))

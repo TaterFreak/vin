@@ -14,12 +14,10 @@ async function readWines() {
     fs.createReadStream('../assets/data/wines.csv')
       .pipe(csv())
       .on('data', (row) => {
-        console.log(row)
-
         wines.push({
           id: parseInt(row.id),
           name: row.name,
-          appelation: parseInt(row.appelation)
+          appellation: parseInt(row.appellation)
         });
       })
       .on('end', () => {

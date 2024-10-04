@@ -1,4 +1,4 @@
-export const useWebsiteStore = defineStore('websiteStore', {
+export const useFoodStore = defineStore('foodStore', {
   state: () => ({
     foods: []
   }),
