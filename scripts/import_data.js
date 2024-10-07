@@ -6,6 +6,7 @@ const wineCountries = [];
 const wineAppellations = [];
 const wineTypes = [];
 const wineRegions = [];
+const foodCategories = [];
 const foods = [];
 let db;
 
@@ -18,6 +19,25 @@ async function readWines() {
           id: parseInt(row.id),
           name: row.name,
           appellation: parseInt(row.appellation)
+        });
+      })
+      .on('end', () => {
+        console.log('CSV file successfully processed');
+        resolve();
+      })
+      .on('error', (error) => {
+        reject(error);
+      });
+  })
+}
+async function readFoodCategories() {
+  return new Promise((resolve, reject) => {
+    fs.createReadStream('../assets/data/foodCategories.csv')
+      .pipe(csv())
+      .on('data', (row) => {
+        foodCategories.push({
+          id: parseInt(row.id),
+          slug: row.slug,
         });
       })
       .on('end', () => {
@@ -121,7 +141,7 @@ async function readFoods() {
         const wineAppellationIds = row.wineAppellationIds.split(',').map(Number);
         const wineRegionIds = row.wineRegionIds.split(',').map(Number);
         const wineIds = row.wineIds.split(',').map(Number);
-        const categories = row.categories.split(',').map(String);
+        const categories = row.categories.split(',').map(Number);
         foods.push({
           id: parseInt(row.id),
           slug: row.slug,
@@ -197,6 +217,16 @@ readWines()
     db = db.getSiblingDB('nitro');
     db.wines.insertMany(wines);
     console.log('Wines imported successfully');
+  })
+  .catch((error) => {
+    console.error('Error processing CSV file:', error);
+  });
+
+readFoodCategories()
+  .then(() => {
+    db = db.getSiblingDB('nitro');
+    db.foodCategories.insertMany(foodCategories);
+    console.log('Food categories imported successfully');
   })
   .catch((error) => {
     console.error('Error processing CSV file:', error);

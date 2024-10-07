@@ -21,6 +21,14 @@ export default defineEventHandler(async (event) => {
       },
       {
         $lookup: {
+          from: "foodCategories",   // Join with wineAppellations collection
+          localField: "categories", // Array of wineAppellationIds in foods
+          foreignField: "id",         // Match with the id field in wineAppellations
+          as: "foodCategoriesData"  // Alias for the resulting wineAppellations
+        }
+      },
+      {
+        $lookup: {
           from: "wines",              // Join with wines collection
           localField: "wineIds",      // Array of wineIds in foods
           foreignField: "id",         // Match with the id field in wines
@@ -30,7 +38,7 @@ export default defineEventHandler(async (event) => {
       {
         $project: {
           slug: 1,
-          categories: 1,
+          "foodCategoriesData": 1,
           "wineTypesData": 1,
           "winesData": 1,
           "wineAppellationsData": 1
