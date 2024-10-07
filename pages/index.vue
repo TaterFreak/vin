@@ -4,7 +4,7 @@ import {useFoodStore} from "~/store/foodStore";
 const { locale, setLocale } = useI18n();
 const foodStore = useFoodStore();
 
-await callOnce(foodStore.fetch);
+await callOnce(foodStore.fetchAllFoodWithDetails);
 </script>
 
 <template>
@@ -13,11 +13,12 @@ await callOnce(foodStore.fetch);
       <button @click="setLocale('en')">en</button>
       <button @click="setLocale('fr')">fr</button>
       <div v-for="food in foodStore.foods">
+        {{food}}
         <div>Food name: {{food.slug}}</div>
         <div>Food categories:
           <ul>
-            <li v-for="category in food.categories">
-              {{category}}
+            <li v-for="category in food.foodCategoriesData">
+              {{category.slug}}
             </li>
           </ul>
         </div>

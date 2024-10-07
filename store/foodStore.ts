@@ -1,6 +1,37 @@
+interface IFoodCategoriesData {
+  id: number,
+  slug: string
+}
+
+interface IWineTypesData {
+  id: number,
+  slug: string
+}
+
+interface IWineAppellationsData {
+  id: number,
+  name: string
+  region: string
+}
+
+interface IWinesData {
+  id: number,
+  name: string
+  appellation: string
+}
+
+interface IFoodData {
+  id: number
+  slug: string
+  wineTypesData: IWineTypesData[]
+  wineAppellationsData: IWineAppellationsData[]
+  foodCategoriesData: IFoodCategoriesData
+  winesData: IWinesData
+}
+
 export const useFoodStore = defineStore('foodStore', {
   state: () => ({
-    foods: []
+    foods: [] as IFoodData[]
   }),
   actions: {
     async fetchAllFoodWithDetails() {
