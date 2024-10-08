@@ -12,5 +12,5 @@ db.wineRegions.createIndex({ id: 1 })
 db.createCollection('wineAppellations')
 db.wineAppellations.createIndex({ id: 1 });
 db.createCollection('foodCategories');
-db.foodCategories.createIndex({ id: 1 })
+db.foodCategories.createIndex({ id: 1 });
 print('Database created successfully.');
