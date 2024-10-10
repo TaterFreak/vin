@@ -144,10 +144,10 @@ async function readFoods() {
       .pipe(csv())
       .on('data', (row) => {
         const wineTypes = row.wineTypes.split(',').map(String);
-        const wineAppellations = row.wineAppellations.split(',').map(String);
-        const wineRegions = row.wineRegions.split(',').map(String);
-        const wines = row.wines.split(',').map(String);
-        const categories = row.categories.split(',').map(String);
+        const wineAppellations = row.wineAppellations.split(',').map(wine => wine.trim());
+        const wineRegions = row.wineRegions.split(',').map(wine => wine.trim());
+        const wines = row.wines.split(',').map(wine => wine.trim());
+        const categories = row.categories.split(',').map(wine => wine.trim());
         foods.push({
           id: parseInt(row.id),
           slug: row.slug,
