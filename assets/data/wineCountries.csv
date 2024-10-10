@@ -1,3 +1,4 @@
-id,name
-1,France
-2,Italie
+id,name,slug
+1,France,france
+2,Italy,italy
+3,Germany,germany

@@ -18,7 +18,11 @@ async function readWines() {
         wines.push({
           id: parseInt(row.id),
           name: row.name,
-          appellation: parseInt(row.appellation)
+          region: row.region,
+          type: row.type,
+          winemaker: row.winemaker,
+          vintage: row.vintage,
+          appellation: row.appellation
         });
       })
       .on('end', () => {
@@ -58,6 +62,7 @@ async function readCountries() {
         wineCountries.push({
           id: parseInt(row.id),
           name: row.name,
+          slug: row.slug,
         });
       })
       .on('end', () => {
@@ -98,7 +103,8 @@ async function readRegions() {
         wineRegions.push({
           id: parseInt(row.id),
           name: row.name,
-          country: parseInt(row.country)
+          slug: row.slug,
+          country: row.country
         });
       })
       .on('end', () => {
@@ -119,7 +125,7 @@ async function readAppellations() {
         wineAppellations.push({
           id: parseInt(row.id),
           name: row.name,
-          region: parseInt(row.region)
+          region: row.region
         });
       })
       .on('end', () => {
@@ -137,19 +143,19 @@ async function readFoods() {
     fs.createReadStream('../assets/data/foods.csv')
       .pipe(csv())
       .on('data', (row) => {
-        const wineTypeIds = row.wineTypeIds.split(',').map(Number);
-        const wineAppellationIds = row.wineAppellationIds.split(',').map(Number);
-        const wineRegionIds = row.wineRegionIds.split(',').map(Number);
-        const wineIds = row.wineIds.split(',').map(Number);
-        const categories = row.categories.split(',').map(Number);
+        const wineTypes = row.wineTypes.split(',').map(String);
+        const wineAppellations = row.wineAppellations.split(',').map(String);
+        const wineRegions = row.wineRegions.split(',').map(String);
+        const wines = row.wines.split(',').map(String);
+        const categories = row.categories.split(',').map(String);
         foods.push({
           id: parseInt(row.id),
           slug: row.slug,
           categories,
-          wineAppellationIds,
-          wineRegionIds,
-          wineIds,
-          wineTypeIds
+          wineAppellations,
+          wineRegions,
+          wines,
+          wineTypes
         });
       })
       .on('end', () => {

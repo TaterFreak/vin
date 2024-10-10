@@ -1,4 +1,28 @@
-id,name,region
-1,Saint-Joseph,10
-2,Nuit-saint-George,1
-3,Chianti Classico,8
+id,name,slug,region
+1,Chianti Classico DOCG,chianti-classico-docg,tuscany
+2,Châteauneuf-du-Pape,chateauneuf-du-pape,rhone
+3,Crozes-Hermitage,crozes-hermitage,rhone
+4,St. Joseph,st-joseph,rhone
+5,Monbazillac,monbazillac,bordeaux
+6,Côte-Rôtie,cote-rotie,rhone
+7,Langhe DOC,langhe-doc,piemont
+8,Brunello di Montalcino,brunello-di-montalcino,tuscany
+9,Rosso di Montalcino,rosso-di-montalcino,tuscany
+10,Auxey-Duresses,auxey-duresses,burgundy
+11,Toscana IGT,toscana-igt,tuscany
+12,Vino Nobile di Montepulciano,vino-nobile-di-montepulciano,tuscany
+13,Pernand-Vergelesses,pernand-vergelesses,burgundy
+14,Bourgogne-Aligoté,bourgogne-aligote,burgundy
+15,Nuits St. Georges 1er Cru,nuits-st-georges-1er-cru,burgundy
+16,Fronsac,fronsac,bordeaux
+17,Rosso di Montalcino,rosso-di-montalcino,tuscany
+18,Cadillac,cadillac,bordeaux
+19,Haut-Médoc,haut-medoc,bordeaux
+20,Savigny-lès-Beaune,savigny-les-beaune,burgundy
+21,Vin de Pays de la Haute Vallée de l'Orb,vin-de-pays-de-la-haute-vallee-de-l-orb,langudoc-roussillon
+22,Pauillac,pauillac,bordeaux
+23,Toscana IGT,toscana-igt,tuscany
+24,Mercurey,mercurey,burgundy
+25,Clos de Chenôves,clos-de-chenoves,burgundy
+26,Barbera d'Alba,barbera-d-alba,piemont
+27,Chablis,chablis,burgundy
