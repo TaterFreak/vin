@@ -2,13 +2,15 @@ import { Schema, model } from "mongoose";
 
 interface IWineAppellation {
   id: number
-  slug: string,
+  name: string
+  slug: string
   region: number
 }
 
 const WineAppellationSchema = new Schema<IWineAppellation>({
   id: Number,
   name: String,
+  slug: String,
   region: Number
 });
 

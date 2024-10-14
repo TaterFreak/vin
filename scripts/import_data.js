@@ -125,6 +125,7 @@ async function readAppellations() {
         wineAppellations.push({
           id: parseInt(row.id),
           name: row.name,
+          slug: row.slug,
           region: row.region
         });
       })

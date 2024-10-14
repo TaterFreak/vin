@@ -8,7 +8,13 @@ export default defineNuxtConfig({
   nitro: {
     plugins: ['~/server/index.ts']
   },
-  modules: ['@nuxtjs/i18n', '@pinia/nuxt'],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  modules: ['@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
   i18n: {
     locales: ['en', 'fr'],
     defaultLocale: 'en',

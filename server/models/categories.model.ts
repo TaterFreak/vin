@@ -5,7 +5,7 @@ interface IFoodCategory {
   slug: string
 }
 
-const FoodCategorySchema = new Schema<ICategory>({
+const FoodCategorySchema = new Schema<IFoodCategory>({
   id: Number,
   slug: String
 });

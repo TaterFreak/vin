@@ -2,24 +2,24 @@ import { Schema, model } from "mongoose";
 
 interface IFood {
   id: number
-  name: string
+  slug: string
   categories: string[]
   pairings: string[]
-  wineTypeIds: string[]
-  wineRegionIds: string[]
-  wineAppellationIds: string[]
-  wineIds: string[]
+  wineTypes: string[]
+  wineRegions: string[]
+  wineAppellations: string[]
+  wines: string[]
 }
 
 const FoodSchema = new Schema<IFood>({
   id: Number,
-  name: String,
-  categories: [Number],
-  pairings: [Number],
-  wineTypeIds: [Number],
-  wineRegionIds: [Number],
-  wineAppellationIds: [Number],
-  wineIds: [Number]
+  slug: String,
+  categories: [String],
+  pairings: [String],
+  wineTypes: [String],
+  wineRegions: [String],
+  wineAppellations: [String],
+  wines: [String]
 });
 
 export const Food = model("Food", FoodSchema);
