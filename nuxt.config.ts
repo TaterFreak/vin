@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI
   },
+  colorMode: {
+    preference: 'light'
+  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   nitro: {
