@@ -3,8 +3,9 @@ import {useFoodStore} from "~/store/foodStore";
 
 const { locale, setLocale } = useI18n();
 const foodStore = useFoodStore();
+const route = useRoute()
 
-await callOnce(foodStore.fetchAllFoodWithDetails);
+await callOnce(foodStore.fetchFoodForSlug(route.params.slug));
 </script>
 
 <template>
