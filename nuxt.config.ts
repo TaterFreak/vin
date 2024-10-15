@@ -36,6 +36,10 @@ export default defineNuxtConfig({
         fr: '/a-propos',
         en: '/about'
       },
+      'wine/[slug]': {
+        fr: '/vin/[slug]',
+        en: '/wine/[slug]'
+      },
       'list/[slug]': {
         fr: '/listes/[slug]',
         en: '/list/[slug]'

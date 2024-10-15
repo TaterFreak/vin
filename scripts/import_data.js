@@ -22,7 +22,8 @@ async function readWines() {
           type: row.type,
           winemaker: row.winemaker,
           vintage: row.vintage,
-          appellation: row.appellation
+          appellation: row.appellation,
+          slug: row.slug
         });
       })
       .on('end', () => {

@@ -7,8 +7,8 @@ export default defineEventHandler(async (event) => {
   const locale = await i18n?.locale();
 
   try {
+    //@todo localize
     const category = await FoodCategory.findOne({[`localizedSlug.fr`]: params?.slug})
-    console.log(locale.split('-')[0] )
     const recipesWithWineTypes = await Food.aggregate([
       {
         $lookup: {

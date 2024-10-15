@@ -7,6 +7,7 @@ interface IWine {
   appellation: string
   vintage: string
   winemaker: string
+  slug: string
 }
 
 const WineSchema = new Schema<IWine>({
@@ -15,7 +16,8 @@ const WineSchema = new Schema<IWine>({
   region: String,
   winemaker: String,
   vintage: String,
-  appellation: Number
+  appellation: Number,
+  slug: String
 });
 
 export const Wine = model("Wine", WineSchema);

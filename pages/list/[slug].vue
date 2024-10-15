@@ -2,8 +2,8 @@
 import {useFoodStore} from "~/store/foodStore";
 
 const foodStore = useFoodStore();
-const route = useRoute()
-const { locale } = useI18n(); 
+const route = useRoute();
+const { locale } = useI18n();
 
 await foodStore.fetchFoodForSlug(route.params.slug);
 </script>

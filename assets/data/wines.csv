@@ -1,32 +1,32 @@
-id,name,Region,type,winemaker,vintage,appellation,nature,bio,biodynamie
-1,Castello di Albola Chianti Classico Le Marangole Gran Selezione,tuscany,red,Castello di Albola,2016,chianti-classico-docg,FALSE,FALSE,FALSE
-2,Castello di Albola Chianti Classico Santa Caterina Gran Selezione,tuscany,red,Castello di Albola,2017,chianti-classico-docg,FALSE,FALSE,FALSE
-3,La Bastide Saint-Dominique Châteauneuf-du-Pape,rhone,red,La Bastide Saint-Dominique,2022,chateauneuf-du-pape,FALSE,FALSE,FALSE
-4,Domaine Belle Crozes-Hermitage Les Pierrelles,rhone,red,Domaine Belle,2021,crozes-hermitage,FALSE,FALSE,FALSE
-5,Domaine Belle St. Joseph Les Rivoires,rhone,red,Domaine Belle,2020,st-joseph,FALSE,FALSE,FALSE
-6,Château Bellevue Monbazillac,bordeaux,sweet-white,Château Bellevue,2015,monbazillac,FALSE,FALSE,FALSE
-7,Graeme & Julie Bott Côte-Rôtie,rhone,red,Graeme & Julie Bott,2020,cote-rotie,FALSE,FALSE,FALSE
-8,Graeme & Julie Bott St. Joseph,rhone,red,Graeme & Julie Bott,2021,st-joseph,FALSE,FALSE,FALSE
-9,Casa Baricalino Langhe Nebbiolo,piemont,red,Casa Baricalino,2020,langhe-doc,FALSE,FALSE,FALSE
-10,Patrizia Cencioni Brunello di Montalcino Ofelio,tuscany,red,Patrizia Cencioni,2019,brunello-di-montalcino,FALSE,FALSE,FALSE
-11,Patrizia Cencioni Rosso di Montalcino,tuscany,red,Patrizia Cencioni,2020,rosso-di-montalcino,FALSE,FALSE,FALSE
-12,Clos du Moulin aux Moines Auxey-Duresses Clos du Moulin aux Moines,burgundy,red,Clos du Moulin aux Moines,2019,auxey-duresses,FALSE,FALSE,FALSE
-13,De'Ricci Il Vignone Toscana IGT,tuscany,red,De'Ricci,2020,toscana-igt,FALSE,FALSE,FALSE
-14,De'Ricci Vino Nobile di Montepulciano Soraldo,tuscany,red,De'Ricci,2019,vino-nobile-di-montepulciano,FALSE,FALSE,FALSE
-15,Denis Pere & Fils Pernand-Vergelesses,burgundy,red,Denis Pere & Fils,2021,pernand-vergelesses,FALSE,FALSE,FALSE
-16,Domaine R. DuBois & Fils Bourgogne-Aligoté,burgundy,white,Domaine R. DuBois & Fils,2021,bourgogne-aligote,FALSE,FALSE,FALSE
-17,Domaine R. DuBois & Fils Nuits St. Georges 1er Cru Clos des Argillières,burgundy,red,Domaine R. DuBois & Fils,2020,nuits-st-georges-1er-cru,FALSE,FALSE,FALSE
-18,Château La Croix-Laroque,bordeaux,red,Château La Croix-Laroque,2020,fronsac,FALSE,FALSE,FALSE
-19,Podere Le Ripi Rosso di Montalcino Sogni e Follia,tuscany,red,Podere Le Ripi,2019,toscana-igt,FALSE,FALSE,FALSE
-20,Château Manos,bordeaux,sweet-white,Château Manos,2019,cadillac,FALSE,FALSE,FALSE
-21,Château Maucamps Cru bourgeois,bordeaux,red,Château Maucamps,2014,haut-medoc,FALSE,FALSE,FALSE
-22,Patriarche Père et Fils Savigny-lès-Beaune,burgundy,red,Patriarche Père et Fils,2017,savigny-les-beaune,FALSE,FALSE,FALSE
-23,Domaine de Pelissols Rouge,langudoc-roussillon,red,Domaine de Pelissols,2017,vin-de-pays-de-la-haute-vallee-de-l-orb,TRUE,TRUE,TRUE
-24,Domaine de Pelissols Blanc,langudoc-roussillon,white,Domaine de Pelissols,,vin-de-pays-de-la-haute-vallee-de-l-orb,TRUE,TRUE,TRUE
-25,Château Pichon-Longueville Baron,bordeaux,red,Château Pichon-Longueville Baron,2016,pauillac,FALSE,FALSE,FALSE
-26,Poggio Grande Piano,tuscany,red,Poggio Grande,2023,toscana-igt,FALSE,FALSE,FALSE
-27,Mercurey Les bossbuts,burgundy,red,Domaine Les Vignes Devant,2020,mercurey,FALSE,FALSE,FALSE
-28,Clos de Chenôves,burgundy,white,Domaine Les Vignes Devant,2020,clos-de-chenoves,FALSE,FALSE,FALSE
-29,Château Vieux Touron Monbazillac,bordeaux,sweet-white,Château Vieux Touron,2011,monbazillac,FALSE,FALSE,FALSE
-30,Weingut Paulushof Monticellum,mosel,red,Weingut Paulushof,2017,,FALSE,FALSE,FALSE
-31,Casa Baricalino Barbera d'Alba,piemont,red,Casa Baricalino,2020,barbera-d-alba,FALSE,FALSE,FALSE
+id,name,Region,type,winemaker,vintage,appellation,nature,bio,biodynamie,slug
+1,Castello di Albola Chianti Classico Le Marangole Gran Selezione,tuscany,red,Castello di Albola,2016,chianti-classico-docg,FALSE,FALSE,FALSE,castello-di-albola-chianti-classico-le-marangole-gran-selezione
+2,Castello di Albola Chianti Classico Santa Caterina Gran Selezione,tuscany,red,Castello di Albola,2017,chianti-classico-docg,FALSE,FALSE,FALSE,castello-di-albola-chianti-classico-santa-caterina-gran-selezione
+3,La Bastide Saint-Dominique Châteauneuf-du-Pape,rhone,red,La Bastide Saint-Dominique,2022,chateauneuf-du-pape,FALSE,FALSE,FALSE,la-bastide-saint-dominique-chateauneuf-du-pape
+4,Domaine Belle Crozes-Hermitage Les Pierrelles,rhone,red,Domaine Belle,2021,crozes-hermitage,FALSE,FALSE,FALSE,domaine-belle-crozes-hermitage-les-pierrelles
+5,Domaine Belle St. Joseph Les Rivoires,rhone,red,Domaine Belle,2020,st-joseph,FALSE,FALSE,FALSE,domaine-belle-st-joseph-les-rivoires
+6,Château Bellevue Monbazillac,bordeaux,sweet-white,Château Bellevue,2015,monbazillac,FALSE,FALSE,FALSE,chateau-bellevue-monbazillac
+7,Graeme & Julie Bott Côte-Rôtie,rhone,red,Graeme & Julie Bott,2020,cote-rotie,FALSE,FALSE,FALSE,graeme-julie-bott-cote-rotie
+8,Graeme & Julie Bott St. Joseph,rhone,red,Graeme & Julie Bott,2021,st-joseph,FALSE,FALSE,FALSE,graeme-julie-bott-st-joseph
+9,Casa Baricalino Langhe Nebbiolo,piemont,red,Casa Baricalino,2020,langhe-doc,FALSE,FALSE,FALSE,casa-baricalino-langhe-nebbiolo
+10,Patrizia Cencioni Brunello di Montalcino Ofelio,tuscany,red,Patrizia Cencioni,2019,brunello-di-montalcino,FALSE,FALSE,FALSE,patrizia-cencioni-brunello-di-montalcino-ofelio
+11,Patrizia Cencioni Rosso di Montalcino,tuscany,red,Patrizia Cencioni,2020,rosso-di-montalcino,FALSE,FALSE,FALSE,patrizia-cencioni-rosso-di-montalcino
+12,Clos du Moulin aux Moines Auxey-Duresses Clos du Moulin aux Moines,burgundy,red,Clos du Moulin aux Moines,2019,auxey-duresses,FALSE,FALSE,FALSE,clos-du-moulin-aux-moines-auxey-duresses-clos-du-moulin-aux-moines
+13,De'Ricci Il Vignone Toscana IGT,tuscany,red,De'Ricci,2020,toscana-igt,FALSE,FALSE,FALSE,de-ricci-il-vignone-toscana-igt
+14,De'Ricci Vino Nobile di Montepulciano Soraldo,tuscany,red,De'Ricci,2019,vino-nobile-di-montepulciano,FALSE,FALSE,FALSE,de-ricci-vino-nobile-di-montepulciano-soraldo
+15,Denis Pere & Fils Pernand-Vergelesses,burgundy,red,Denis Pere & Fils,2021,pernand-vergelesses,FALSE,FALSE,FALSE,denis-pere-fils-pernand-vergelesses
+16,Domaine R. DuBois & Fils Bourgogne-Aligoté,burgundy,white,Domaine R. DuBois & Fils,2021,bourgogne-aligote,FALSE,FALSE,FALSE,domaine-r-dubois-fils-bourgogne-aligote
+17,Domaine R. DuBois & Fils Nuits St. Georges 1er Cru Clos des Argillières,burgundy,red,Domaine R. DuBois & Fils,2020,nuits-st-georges-1er-cru,FALSE,FALSE,FALSE,domaine-r-dubois-fils-nuits-st-georges-1er-cru-clos-des-argillieres
+18,Château La Croix-Laroque,bordeaux,red,Château La Croix-Laroque,2020,fronsac,FALSE,FALSE,FALSE,chateau-la-croix-laroque
+19,Podere Le Ripi Rosso di Montalcino Sogni e Follia,tuscany,red,Podere Le Ripi,2019,toscana-igt,FALSE,FALSE,FALSE,podere-le-ripi-rosso-di-montalcino-sogni-e-follia
+20,Château Manos,bordeaux,sweet-white,Château Manos,2019,cadillac,FALSE,FALSE,FALSE,chateau-manos
+21,Château Maucamps Cru bourgeois,bordeaux,red,Château Maucamps,2014,haut-medoc,FALSE,FALSE,FALSE,chateau-maucamps-cru-bourgeois
+22,Patriarche Père et Fils Savigny-lès-Beaune,burgundy,red,Patriarche Père et Fils,2017,savigny-les-beaune,FALSE,FALSE,FALSE,patriarche-pere-et-fils-savigny-les-beaune
+23,Domaine de Pelissols Rouge,langudoc-roussillon,red,Domaine de Pelissols,2017,vin-de-pays-de-la-haute-vallee-de-l-orb,TRUE,TRUE,TRUE,domaine-de-pelissols-rouge
+24,Domaine de Pelissols Blanc,langudoc-roussillon,white,Domaine de Pelissols,,vin-de-pays-de-la-haute-vallee-de-l-orb,TRUE,TRUE,TRUE,domaine-de-pelissols-blanc
+25,Château Pichon-Longueville Baron,bordeaux,red,Château Pichon-Longueville Baron,2016,pauillac,FALSE,FALSE,FALSE,chateau-pichon-longueville-baron
+26,Poggio Grande Piano,tuscany,red,Poggio Grande,2023,toscana-igt,FALSE,FALSE,FALSE,poggio-grande-piano
+27,Mercurey Les bossbuts,burgundy,red,Domaine Les Vignes Devant,2020,mercurey,FALSE,FALSE,FALSE,mercurey-les-bossbuts
+28,Clos de Chenôves,burgundy,white,Domaine Les Vignes Devant,2020,clos-de-chenoves,FALSE,FALSE,FALSE,clos-de-chenoves
+29,Château Vieux Touron Monbazillac,bordeaux,sweet-white,Château Vieux Touron,2011,monbazillac,FALSE,FALSE,FALSE,chateau-vieux-touron-monbazillac
+30,Weingut Paulushof Monticellum,mosel,red,Weingut Paulushof,2017,,FALSE,FALSE,FALSE,weingut-paulushof-monticellum
+31,Casa Baricalino Barbera d'Alba,piemont,red,Casa Baricalino,2020,barbera-d-alba,FALSE,FALSE,FALSE,casa-baricalino-barbera-d-alba

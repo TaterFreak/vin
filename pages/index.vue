@@ -23,9 +23,9 @@ await callOnce(foodStore.fetchAllFoodWithDetails);
             <ul class="list-inside">
               <li v-for="(category, i) in food.foodCategories"
               :key="i" class="capitalize">
-              <NuxtLink :to="localePath({ name: 'list-slug', params: { slug: category.localizedSlug[locale] } })">
-                {{ category.localizedSlug[locale] }}
-              </NuxtLink>
+                <NuxtLink :to="localePath({ name: 'list-slug', params: { slug: category.localizedSlug[locale] } })">
+                  {{ category.localizedSlug[locale] }}
+                </NuxtLink>
               </li>
             </ul>
           </div>
@@ -52,7 +52,9 @@ await callOnce(foodStore.fetchAllFoodWithDetails);
             <ul class="list-inside list-disc">
               <li v-for="(wine, i) in food.wines"
                 :key="i">
-                {{wine.name}}
+                <NuxtLink :to="localePath({ name: 'wine-slug', params: { slug: wine.slug } })">
+                  {{wine.name}}
+                </NuxtLink>
               </li>
             </ul>
           </div>
