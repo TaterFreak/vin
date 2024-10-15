@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 interface IFood {
   id: number
   slug: string
-  categories: string[]
+  categories: number[]
   pairings: string[]
   wineTypes: string[]
   wineRegions: string[]
@@ -14,7 +14,7 @@ interface IFood {
 const FoodSchema = new Schema<IFood>({
   id: Number,
   slug: String,
-  categories: [String],
+  categories: [Number],
   pairings: [String],
   wineTypes: [String],
   wineRegions: [String],

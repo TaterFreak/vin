@@ -42,6 +42,10 @@ async function readFoodCategories() {
         foodCategories.push({
           id: parseInt(row.id),
           slug: row.slug,
+          localizedSlug: {
+            fr: row.fr,
+            en: row.slug
+          }
         });
       })
       .on('end', () => {
@@ -148,7 +152,7 @@ async function readFoods() {
         const wineAppellations = row.wineAppellations.split(',').map(wine => wine.trim());
         const wineRegions = row.wineRegions.split(',').map(wine => wine.trim());
         const wines = row.wines.split(',').map(wine => wine.trim());
-        const categories = row.categories.split(',').map(wine => wine.trim());
+        const categories = row.categories.split(',').map(Number);
         foods.push({
           id: parseInt(row.id),
           slug: row.slug,

@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
         $lookup: {
           from: "foodCategories",
           localField: "categories",
-          foreignField: "slug",
+          foreignField: "id",
           as: "foodCategories"
         }
       },

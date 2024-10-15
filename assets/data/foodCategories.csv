@@ -1,5 +1,5 @@
-id,slug
-1,meat
-2,vegetables
-3,pasta
-4,seafood
+id,slug,fr
+1,meat,viandes
+2,vegetables,legumes
+3,pasta,pates
+4,seafood,fruits-de-mer

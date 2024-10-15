@@ -5,7 +5,7 @@ const { locale, setLocale } = useI18n();
 const foodStore = useFoodStore();
 const route = useRoute()
 
-await callOnce(foodStore.fetchFoodForSlug(route.params.slug));
+await callOnce(() => foodStore.fetchFoodForSlug(route.params.slug));
 </script>
 
 <template>

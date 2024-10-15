@@ -1,4 +1,4 @@
 id,slug,categories,wineTypes,wineRegions,wineAppellations,wines,aromas,notes
-1,huitres,seafood,white,burgundy,"bourgogne-aligote, chablis",Domaine R. DuBois & Fils Bourgogne-Aligoté,briny,"Des vins mineraux, voir iodé avec une belle acidité"
-2,fois-gras,meat,sweet-white,bordeaux,"cadillac, monbazillac","Château Bellevue Monbazillac, Château Manos, Château Vieux Touron Monbazillac",sweet,
-3,bolognaise,"meat, pasta",red,"rhone, tuscany, piemont","chianti-classico-docg, crozes-hermitage",Casa Baricalino Barbera d'Alba,"spicy, acid","Chercher l'acidité (pour les tomates) ou les épices, des cépages comme le sangiovese et barbera pour l'acidité ou la Syrah pour l'épice"
+1,huitres,4,white,burgundy,"bourgogne-aligote, chablis",Domaine R. DuBois & Fils Bourgogne-Aligoté,briny,"Des vins mineraux, voir iodé avec une belle acidité"
+2,fois-gras,1,sweet-white,bordeaux,"cadillac, monbazillac","Château Bellevue Monbazillac, Château Manos, Château Vieux Touron Monbazillac",sweet,
+3,bolognaise,"1,3",red,"rhone, tuscany, piemont","chianti-classico-docg, crozes-hermitage",Casa Baricalino Barbera d'Alba,"spicy, acid","Chercher l'acidité (pour les tomates) ou les épices, des cépages comme le sangiovese et barbera pour l'acidité ou la Syrah pour l'épice"
