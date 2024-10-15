@@ -1,6 +1,6 @@
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: 'en',
+  locale: 'fr',
   messages: {
     en: {
       welcome: 'Welcome'
@@ -9,5 +9,4 @@ export default defineI18nConfig(() => ({
       welcome: 'Bienvenue'
     }
   },
-  customRoutes: 'config',
 }))

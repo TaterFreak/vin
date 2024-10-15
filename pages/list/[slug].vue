@@ -1,11 +1,11 @@
 <script setup>
 import {useFoodStore} from "~/store/foodStore";
 
-const { locale, setLocale } = useI18n();
 const foodStore = useFoodStore();
 const route = useRoute()
+const { locale } = useI18n(); 
 
-await callOnce(() => foodStore.fetchFoodForSlug(route.params.slug));
+await foodStore.fetchFoodForSlug(route.params.slug);
 </script>
 
 <template>
@@ -24,7 +24,9 @@ await callOnce(() => foodStore.fetchFoodForSlug(route.params.slug));
             <ul class="list-inside">
               <li v-for="(category, i) in food.foodCategories"
               :key="i" class="capitalize">
-                {{category.slug}}
+                <NuxtLink :to="localePath({ name: 'list-slug', params: { slug: category.localizedSlug[locale] } })">
+                  {{ category.localizedSlug[locale] }}
+                </NuxtLink>
               </li>
             </ul>
           </div>

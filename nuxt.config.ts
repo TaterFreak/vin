@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI
   },
+  experimental: {
+    watcher: 'chokidar'
+  },
   colorMode: {
     preference: 'light'
   },
@@ -19,8 +22,24 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/ui'],
   i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
-    vueI18n: './i18n.config.ts'
+    experimental: {
+      localeDetector: './localeDetector.ts'
+    },
+    locales: ['fr', 'en'],
+    detectBrowserLanguage: false,
+    defaultLocale: 'fr',
+    vueI18n: './i18n.config.ts',
+    customRoutes: 'config',
+    strategy: 'prefix_except_default',
+    pages: {
+      about: {
+        fr: '/a-propos',
+        en: '/about'
+      },
+      'list/[slug]': {
+        fr: '/listes/[slug]',
+        en: '/list/[slug]'
+      }
+    }
   }
 })

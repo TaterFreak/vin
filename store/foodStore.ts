@@ -38,7 +38,7 @@ export const useFoodStore = defineStore('foodStore', {
       this.foods = await $fetch('/api/food');
     },
     async fetchFoodForSlug(slug) {
-      this.foods = await $fetch(`/api/food/${slug}`);
+      this.foods = await $fetch(`/api/food/${slug}`, {retry: false});
     }
   }
 })

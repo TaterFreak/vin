@@ -1,9 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n();
 </script>
 
 <template>
   <header class="header">
-    Lorem ipsum
+    {{$t('welcome')}}
   </header>
 </template>
 
